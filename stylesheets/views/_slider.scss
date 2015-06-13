@@ -1,0 +1,41 @@
+.list-item {
+	position: relative !important;
+	color: gray;
+	>&.active-menu {
+		color: red;
+	}
+	.sub-menu {
+		width: 0;
+		padding: 0;
+		list-style: none;
+		background-color: white;
+		position: absolute !important;
+	  	top: 0px;
+	  	left: 111px;
+		transition: all 0.2s ease-in-out;
+		overflow: hidden;
+		li {
+			cursor: pointer;
+			margin-left: 8%;
+			text-align: left !important;
+			padding: 5%;
+			width: 200px;
+			font-size: 18px;
+	  		font-family: "Slabo-Regular";
+	  		border-bottom: 1px solid #C0C0C0;
+		}
+		li:hover{
+			color: red;
+		}
+	}
+	&.open {
+		.sub-menu {
+			width: 200px;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+}
+.nav-stacked > li {
+  float: none;
+  text-align: center;
+}
